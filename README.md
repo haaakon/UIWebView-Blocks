@@ -20,15 +20,20 @@ UIWebView-Blocks
             
 ```
 
+#### webView:shouldStartLoadWithRequest:navigationType:navigationType
 ```objective-c
 [self.webView setWebViewShouldStartLoadWithRequestBlock:^BOOL(UIWebView *webView, NSURLRequest *request, UIWebViewNavigationType navigationType) {
         // your stuff here
     return YES;
 }];
 
-        
 ```
-
+#### webViewDidFailWithError:
+```objective-c
+[self.webView setWebViewDidFailWithErrorBlock:^(UIWebView *webView, NSError *error) {
+    // your error handling code here
+}];
+```
 
 ### LICENSE
 
