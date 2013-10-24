@@ -15,5 +15,9 @@
 @property (copy, nonatomic) void (^webViewDidFinishLoadBlock)(UIWebView *webView);
 @property (copy, nonatomic) void (^webViewDidFailWithErrorBlock)(UIWebView *webView,NSError *error);
 
+- (void)setWebViewShouldStartLoadWithRequestBlock:(BOOL (^)(UIWebView *webView, NSURLRequest *request, UIWebViewNavigationType navigationType))webViewShouldStartLoadWithRequestBlock;
+- (void)setWebViewDidStartLoadBlock:(void (^)(UIWebView *webView))webViewDidStartLoadBlock;
 - (void)setWebViewDidFinishLoadBlock:(void (^)(UIWebView *webView))webViewDidFinishLoadBlock;
+- (void)setWebViewDidFailWithErrorBlock:(void (^)(UIWebView *webView, NSError *error))webViewDidFailWithErrorBlock;
+
 @end

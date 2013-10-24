@@ -41,13 +41,13 @@ static const void *UIWebViewDidFailWithErrorKey                           = &UIW
 {
     UIWebViewVoidBlock block = webView.webViewDidStartLoadBlock;
     if (block) {
-        return block(webView);
+        block(webView);
     }
     
     id delegate = objc_getAssociatedObject(self, UIWebViewDelegateKey);
     
     if ([delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-        return [delegate webViewDidStartLoad:webView];
+        [delegate webViewDidStartLoad:webView];
     }
 }
 
@@ -55,13 +55,13 @@ static const void *UIWebViewDidFailWithErrorKey                           = &UIW
 {
     UIWebViewVoidBlock block = webView.webViewDidFinishLoadBlock;
     if (block) {
-        return block(webView);
+        block(webView);
     }
     
     id delegate = objc_getAssociatedObject(self, UIWebViewDelegateKey);
     
     if ([delegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
-        return [delegate webViewDidFinishLoad:webView];
+        [delegate webViewDidFinishLoad:webView];
     }
 }
 
@@ -69,13 +69,13 @@ static const void *UIWebViewDidFailWithErrorKey                           = &UIW
 {
     UIWebViewVoidErrorBlock block = webView.webViewDidFailWithErrorBlock;
     if (block) {
-        return block(webView, error);
+        block(webView, error);
     }
     
     id delegate = objc_getAssociatedObject(self, UIWebViewDelegateKey);
     
     if ([delegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
-        return [delegate webView:webView didFailLoadWithError:error];
+        [delegate webView:webView didFailLoadWithError:error];
     }
 }
 

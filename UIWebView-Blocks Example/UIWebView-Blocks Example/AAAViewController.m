@@ -32,6 +32,10 @@
         NSLog(@"%s",__PRETTY_FUNCTION__);
         return YES;
     }];
+    
+    [self.webView setWebViewDidFailWithErrorBlock:^(UIWebView *webView, NSError *error) {
+        // your error handling code here
+    }];
 }
 
 @end
