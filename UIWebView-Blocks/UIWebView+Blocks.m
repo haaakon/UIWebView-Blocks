@@ -13,10 +13,10 @@ typedef BOOL (^UIWebViewRequestAndNavigationTypeBlock)(UIWebView *webView, NSURL
 typedef void (^UIWebViewVoidBlock)(UIWebView *webView);
 typedef void (^UIWebViewVoidErrorBlock)(UIWebView *webView,NSError *error);
 
-static const void *UIWebViewDelegateKey                           = &UIWebViewDelegateKey;
-static const void *UIWebViewShouldStartLoadWithRequestKey                           = &UIWebViewShouldStartLoadWithRequestKey;
-static const void *UIWebViewDidStartLoadKey                           = &UIWebViewDidStartLoadKey;
-static const void *UIWebViewDidFinishLoadKey                           = &UIWebViewDidFinishLoadKey;
+static const void *UIWebViewDelegateKey                                   = &UIWebViewDelegateKey;
+static const void *UIWebViewShouldStartLoadWithRequestKey                 = &UIWebViewShouldStartLoadWithRequestKey;
+static const void *UIWebViewDidStartLoadKey                               = &UIWebViewDidStartLoadKey;
+static const void *UIWebViewDidFinishLoadKey                              = &UIWebViewDidFinishLoadKey;
 static const void *UIWebViewDidFailWithErrorKey                           = &UIWebViewDidFailWithErrorKey;
 
 @implementation UIWebView (Blocks)
