@@ -1,7 +1,7 @@
 UIWebView-Blocks
 ================
 
-Adds blocks to all UISearchbar delegate methods with a simple and easy to use category, no subclassing. Also allows the use of delegate methods if no block is set.
+Adds blocks to all UIWebView delegate methods with a simple and easy to use category, no subclassing. Also allows the use of delegate methods if no block is set.
 
 [![Build Status](https://travis-ci.org/haaakon/UIWebView-Blocks.png)](https://travis-ci.org/haaakon/UIWebView-Blocks)
 
